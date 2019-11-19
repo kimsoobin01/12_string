@@ -4,9 +4,9 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 void main(void){
-	char src[] = "The worst things to eat before you sleep";
-	char dst[100];
+	char str[30] ="Happy C language";
+	int i=0;
 	
-	strcpy(dst, src);
-	printf("copied string: %s", dst);
+	printf("%s: %i \n", str, strlen(str));
+	return 0;
 }
