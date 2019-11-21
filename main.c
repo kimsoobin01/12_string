@@ -3,10 +3,20 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void main(void){
-	char str[30] ="Happy C language";
-	int i=0;
+int main (void){
+	int i;
+	char input [100];
+	FILE *fp;
 	
-	printf("%s: %i \n", str, strlen(str));
+	fp = fopen ("sample.txt", "w");
+	for (i=0; i<3;i++)
+	{
+		printf("input a word :  ");
+		scanf("%s", input);
+		fprintf(fp, "%s\n", input);
+	}
+	fclose(fp);
 	return 0;
+	
 }
+	
